@@ -52,6 +52,7 @@ header h3{
 #container{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 #cocktailList{
   float: left;
@@ -64,4 +65,6 @@ header h3{
 #ingre{
   display: flex;
   flex-direction: row;
+  justify-content: space-between
+  ;
 }
