@@ -14,15 +14,11 @@ body{
 
 }
 
-header {
-  width: 100%;
-  height: 20%;
 
-}
 header img{
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 30%;
   border-radius: 6px;
 }
 header h3{
@@ -63,7 +59,7 @@ header h3{
   padding: 10px;
   border: 1px solid grey;
   box-shadow: 0.5px grey;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 #cocktailList{
   float: left;
@@ -78,7 +74,7 @@ header h3{
 #details img{
   width: 100%;
   height: 300px;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 #ingre{
   display: flex;
@@ -87,12 +83,12 @@ header h3{
   padding: 20px 0px;
 
 }
-#instruction{
+#instructions{
   text-align: center;
   padding: 20px 0px;
 }
 #images{
-  padding: 10px;
+  padding: 6px;
   border: 1px solid grey;
   box-shadow: 0.5px grey;
   border-radius: 10px;
