@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script defer type="text/javascript" src="./index.js"></script>
   <link rel="stylesheet" href="./index.css">
   <title>Cocktails Co</title>
 </head>
@@ -16,23 +15,21 @@
       </div>
      
           ​<div id="login">
-          <form  class="input-group">
-              <input type="email" class="input-field" placeholder="Enter your email" required />
-              <input type="password" class="input-field" placeholder="Enter Password" required />
-              <input type="checkbox" class="thebox" />
-              <span>Remember Password</span>
-              <button type="submit" class="submit-btn">Login</button>
+          <form  class="input-login">
+              <input id="design" type="email" class="input-field" placeholder="Enter your email" required />
+              <input id="design"  type="password" class="input-field" placeholder="Enter Password" required />
+              <input id="design"  type="submit" class="input-field btn-sec" value="LOGIN">
+              <span class="signup"><a href="#" id="switch-down">Create an Account</a><hr></span>
           </form>
         </div>
         <div id="register">
-          <form class="input-group">
-              <input type="Username" class="input-field" placeholder="Enter your username" required />
-              <input type="Email" class="input-field" placeholder="Email " required />
-              <input type="text" class="input-field" placeholder="Enter your spouse name" required />
-              <input type="password" class="input-field" placeholder="Enter Password" required />
-              <input type="checkbox" class="thebox" />
-              <span>I agree to the terms & condition</span>
-              <button type="submit" class="submit-btn">Register</button>
+          <form class="input-signup">
+              <input id="design"  type="Username" class="input-field" placeholder="Enter your username" required />
+              <input id="design"  type="Email" class="input-field" placeholder="Email " required />
+              <input id="design"  type="text" class="input-field" placeholder="Enter your spouse name" required />
+              <input id="design"  type="password" class="input-field" placeholder="Enter Password" required />
+              <input id="design"  type="submit" class="input-field btn-sec" value="SIGN UP">
+              <span class="signup"><a id="switch-up" href="#">Already a user Login?</a><hr></span>
           </form>
         </div>
       </div>
@@ -40,17 +37,37 @@
 
   </section>
 
-  <section id="">
+  <section id="cocktails">
   <header>
+    <img src="./cocktail.jpg" alt="">
     <h3>Every person deserves a happy hour</h3>
   </header>
   <div id="container">
     <div id="list">
+      <ul id="cocktailList">
+        <li>Cocktail List</li>
+
+      </ul>
 
     </div>
 
     <div id="details">
+    <div id="img">
+      <img src="" alt="">
+    </div>
+    <div id="ingre">
+      <div id="ingredient">
 
+      </div>
+      <div id="measurements">
+
+      </div>
+
+    </div>
+
+    <div id="instruction">
+
+    </div>
     </div>
 
   </div>
@@ -60,5 +77,7 @@
   </div>
 </section>
 
+<script defer type="text/javascript" src="./index.js"></script>
+<script defer type="text/javascript" src="./login.js"></script>
 </body>
 </html>
