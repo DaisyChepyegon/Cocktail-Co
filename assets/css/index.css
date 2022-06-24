@@ -82,10 +82,13 @@ h2{
 #cocktailList{
   float: left;
   padding: 20px;
+  
 
 }
 #cocktailList li{
   padding: 20px;
+  font-size: 25px;
+  font-style: italic;
 }
 #details{
   float: right;
