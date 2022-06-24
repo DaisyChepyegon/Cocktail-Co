@@ -114,15 +114,14 @@ h2{
   text-align: center;
   padding: 20px 0px;
 }
-#images{
+#drink{
   padding: 6px;
 
 }
 
-.image-section{
+#drink{
   display: flex;
   flex-direction: row;
-  gap:2.5rem;
   width: 100%;
   overflow-x: auto;
   flex-wrap: nowrap;
@@ -131,7 +130,7 @@ h2{
 
 }
 
-.image-section img {
+#drink img {
   display: inline-block;
   top: 0px;
   margin: 0px;
@@ -143,7 +142,7 @@ h2{
   flex-wrap: nowrap;
   -webkit-overflow-scrolling: touch;
 }
-#images h3{
+#drink h3{
   justify-content: center;
 }
 button{
