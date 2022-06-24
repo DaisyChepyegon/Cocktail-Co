@@ -161,6 +161,16 @@ button{
  border-radius: 10px;
  box-shadow: 2px white;
 }
+#btn1{
+  margin-left: 10 0px;
+  background-color: black;
+  height: 50px;
+  width: 200px;
+  color: rgb(99, 216, 21);
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 2px white;
+}
 #forms{
   margin-left: 100px;
 }
