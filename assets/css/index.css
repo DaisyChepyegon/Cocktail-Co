@@ -146,3 +146,15 @@ button{
  font-size: 20px;
  border-radius: 10px;
 }
+#btn{
+  margin-left: 200px;
+ background-color: black;
+ height: 50px;
+ width: 200px;
+ color: rgb(99, 216, 21);
+ font-size: 20px;
+ border-radius: 10px;
+}
+#forms{
+  margin-left: 100px;
+}
