@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   getData();
+  
 
 });
 
@@ -40,3 +41,18 @@ function listCocktails(drinks) {
     });
   };
 }
+
+
+
+
+  fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic')
+    .then(response =>response.json())
+    .then((drinks) => {
+      console.log( typeof drinks)
+      //const images = document.getElementsByClassName('image').setAttribute("src", 'drinks.strDrinkThumb');
+      const  names = document.getElementsByClassName('name').innerText = drinks.strDrink;
+
+    })
+
+
+
