@@ -146,6 +146,9 @@ h2{
 #drink h3{
   justify-content: center;
 }
+#drinks ol{
+  text-decoration: none;
+}
 button{
  margin-left: 600px;
  background-color: black;

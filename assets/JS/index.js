@@ -12,6 +12,7 @@ function getData(){
       .then((drinks) => {
         //console.log(data[0])
         listCocktails(drinks)
+        console.log(drinks)
       })
       .catch(error =>  console.log(error))
 }
@@ -25,8 +26,8 @@ let instruction =document.getElementById("instructions")
 function listCocktails(drinks) {
   // data = JSON.parse(data);
   for(let data in drinks){
-  //data.forEach((data) => {
-    console.log(typeof data)
+    //data.forEach((data) => {
+    // console.log(typeof data)
     let list = document.createElement("li");
     list.innerText = data.strDrink;
 
@@ -56,7 +57,7 @@ function listCocktails(drinks) {
 
         <img src=${value.strDrinkThumb} alt="img" class ="images">
         <h3>${value.strDrink}</h3>
-        <li class="like">Like! <span class="like-glyph">&#x2661;</span></li>
+        <ol> <li class="like">Like <span class="like-glyph">&#x2661;</span></li></ol>
 
       </div>
                `
@@ -70,10 +71,8 @@ function listCocktails(drinks) {
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
-const modal= document.getElementById('modal');
  const hearts = document.querySelectorAll(".like-glyph");
  
- modal.className = "hidden";
 
   const likePost = (e) =>{ 
 
@@ -87,14 +86,8 @@ mimicServerCall()
     :(heart.innerText = EMPTY_HEART, heart.classList.remove("activated-heart"))
   })
 
-  .catch(error => {
-    modal.classList.remove("hidden");
-    modal.querySelector("#modal-message").textContent = error;
-    setTimeout( () => {
-      modal.classList.add("hidden")
-    }, 3000)
-  })
-  }
+  
+}
 
 hearts.forEach( heart => {
 heart.addEventListener("click", likePost)
