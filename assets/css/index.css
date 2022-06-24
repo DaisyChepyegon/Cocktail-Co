@@ -25,17 +25,26 @@ header h3{
   position: absolute;
   color: white;
 }
-.forms{
+.form{
   display: flex;
   flex-direction: row;
   background-color: black;
   color: white;
+  border-radius: 10px;
   
+}
+h1{
+  justify-content: center;
+  font-style: italic;
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
 }
 #image img{
   width: 500px;
   height: 500px;
   float: left;
+  border-radius: 10px ;
 }
 #login{
   display: block;
@@ -50,6 +59,20 @@ header h3{
   border-radius: 10px;
   padding: 20px;
 }
+h2{
+  text-align: center;
+}
+.input-field{
+  width: 95%;
+  margin: 15px 5px;
+  border-radius: 6px;
+  height: 30px;
+}
+.signup{
+  margin-left: 100px;
+  padding: 20px;
+}
+
 #container{
   display: flex;
   flex-direction: row;
@@ -57,9 +80,6 @@ header h3{
   width: 100%;
   height: 30%;
   padding: 10px;
-  border: 1px solid grey;
-  box-shadow: 0.5px grey;
-  border-radius: 6px;
 }
 #cocktailList{
   float: left;
@@ -89,9 +109,7 @@ header h3{
 }
 #images{
   padding: 6px;
-  border: 1px solid grey;
-  box-shadow: 0.5px grey;
-  border-radius: 10px;
+
 }
 
 .image-section{
