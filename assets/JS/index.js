@@ -44,36 +44,61 @@ function listCocktails(drinks) {
 
 
 
-
-  fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic')
-    .then(response =>response.json())
-    .then((drinks) => {
-      console.log( typeof drinks)
-      //const images = document.getElementsByClassName('image').setAttribute("src", 'drinks.strDrinkThumb');
-      const  names = document.getElementsByClassName('name').innerText = drinks.strDrink;
-
-    })
-
-    //.initializing
   fetch(`http://localhost:3000/drinks`)
     .then((data) => {
       return data.json();
     })
     .then((completeddata) => {
-      let data1 = "";
+      let drinks = "";
       completeddata.map((value) => {
-        data1 += `
+        drinks += `
       <div id="drinks">
+
         <img src=${value.strDrinkThumb} alt="img" class ="images">
         <h3>${value.strDrink}</h3>
-        <p> ${value.idDrink}</p>
+        <li class="like">Like! <span class="like-glyph">&#x2661;</span></li>
+
       </div>
                `
       });
-      document.getElementById("drink").innerHTML = data1;
+      document.getElementById("drink").innerHTML = drinks;
     }).catch((Error) => {
       console.log(Error)
     })
+
+
+const EMPTY_HEART = '♡'
+const FULL_HEART = '♥'
+
+const modal= document.getElementById('modal');
+ const hearts = document.querySelectorAll(".like-glyph");
+ 
+ modal.className = "hidden";
+
+  const likePost = (e) =>{ 
+
+const heart = e.target
+heart.innerText = EMPTY_HEART
+mimicServerCall()
+
+  .then( responce => {
+    (heart.innerText === EMPTY_HEART)?
+    (heart.innerText = FULL_HEART, heart.classList.add("activated-heart"))
+    :(heart.innerText = EMPTY_HEART, heart.classList.remove("activated-heart"))
+  })
+
+  .catch(error => {
+    modal.classList.remove("hidden");
+    modal.querySelector("#modal-message").textContent = error;
+    setTimeout( () => {
+      modal.classList.add("hidden")
+    }, 3000)
+  })
+  }
+
+hearts.forEach( heart => {
+heart.addEventListener("click", likePost)
+})
 
 
 
