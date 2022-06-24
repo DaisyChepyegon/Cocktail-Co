@@ -9,7 +9,7 @@ body{
   padding: 20px 150px;
   border: 0.2px solid grey;
   border-radius: 20px;
-  box-shadow: 10px 10px 8px 10px #888888;
+  box-shadow: 5px 5px 8px 5px #888888;
 
 }
 
@@ -67,6 +67,9 @@ h2{
 }
 #cocktails{
   display: none;
+}
+#switch-down{
+  margin-left: 40px;
 }
 
 
