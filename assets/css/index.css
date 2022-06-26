@@ -194,3 +194,10 @@ button{
 .like-glyph {
   cursor: pointer;
 }
+
+#search{
+  margin-left: 200px;
+  padding: 20px;
+  font-size: 20px;
+ 
+}

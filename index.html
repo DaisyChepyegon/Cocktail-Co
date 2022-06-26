@@ -22,8 +22,8 @@
 
           <form id="input-login" class="input">
             <h2>LOGIN</h2>
-              <input type="email" class="input-field" placeholder="Enter your email" required />
-              <input  type="password" class="input-field" placeholder="Enter Password" required />
+              <input type="email" class="input-field" id="email" placeholder="Enter your email" required />
+              <input  type="password" class="input-field" id="password" placeholder="Enter Password" required />
               <div id="subButton">
               <input  type="submit" class="input-field btn-sec" id="btn" value="LOGIN">
               </div>
@@ -57,8 +57,16 @@
   
   <div id="container">
     <div id="list">
+      <div class="navigation">
+    
+       
+
+        
+
+      </div>
       <h3>Cocktail List</h3>
       <hr>
+
       <ul id="cocktailList">
     
 
@@ -66,9 +74,15 @@
 
     </div>
 
+
     <div id="details">
+      <form id="search">
+        <input type="text" id="searchvalue"  placeholder="">
+        <input id="submit" type="submit" value="SEARCH" />
+    </form>
+<div id="display">
     <div id="img">
-      <img src="./assets/images/SideCar.jpg" alt="DisplayImage">
+      <img id="picture" src="" alt="DisplayImage">
     </div>
     <div id="ingre">
       <div id="ingredients">
@@ -97,6 +111,13 @@
     </div>
 
   </div>
+</div>
+
+ <div id="searchDrink">
+
+ </div>
+
+ 
 
   <div id="images">
     <h2>CHOOSE YOUR FAVORITE DRINK</h2>

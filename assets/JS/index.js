@@ -9,16 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //display first drink
-// fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17222')
-// .then(res => res.json())
-// .then (data =>
-//   {
+fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a=17222')
+.then(res => res.json())
+.then (data =>
+  {
      
-//      const image = document.querySelector("#img").setAttribute("src", data.strDrinkThumb);
+     const image = document.querySelector("#picture").src=data.strDrinkThumb;
      
-//      const instruction = document.querySelector("#instructions").innerText = data.strInstructions;
+     const instruction = document.querySelector("#instructions").innerText = data.strInstructions;
 
-// })
+})
 
 
 
@@ -34,7 +34,7 @@ function getData(){
 }
 
 const cocktailList = document.querySelector("#cocktailList");
-let image = document.getElementById("img");
+let image = document.getElementById("picture");
 let ingredient = document.getElementById("ingredients");
 let measurement = document.getElementById("measurements");
 let instruction =document.getElementById("instructions")
@@ -48,7 +48,9 @@ function listCocktails(drink) {
     cocktailList.appendChild(list);
     list.addEventListener("click", () => {
 
-      image.setAttribute("src",element.strDrinkThumb)
+      image.src=element.strDrinkThumb;
+      console.log(element.strDrinkThumb)
+
       instruction.innerHTML = element.strInstructions;
 
     if(element.strIngredient1 !== null){
@@ -134,6 +136,62 @@ function listCocktails(drink) {
       console.log(Error)
     })
 
+
+
+    function searchDrink(){
+
+      document.querySelector('#search').addEventListener('submit', (e) =>{
+      e.preventDefault()
+      
+  
+      const myValue = e.target.searchvalue.value;
+       const details = document.querySelector("#display"); 
+       dInfo.style.display = "none"
+  
+      const searchDrinks = document.querySelector("#searchDrink");
+      searchDrinks.style.display = "block"
+  
+      const card = document.createElement("div"); 
+      card.className = "sContainer";
+  
+      searchDrinks.innerHTML = ""  
+  
+      searchDrinks.appendChild(card)
+      
+      
+      fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${myValue}`)
+      .then(res => res.json())
+      .then(data => {
+          
+          data.drinks.forEach(item =>{
+  
+              const newElement = document.createElement('div')
+              newElement.className = "scard"
+              newElement.innerHTML = `
+              
+              <img id = "simage" src= "${item.strDrinkThumb}" alt= "drink" >
+              <p>Name : ${item.strDrink}</p>
+              <p>Type: ${item.strAlcoholic}</p>
+              <ul>
+              <p>Ingredients:</p>
+              <li>${item.strIngredient1}</li>
+              <li>${item.strIngredient2}</li>
+              <li>${item.strIngredient3}</li>
+              </ul>
+              <p>Description: </p>
+              <ul><li>${item.strInstructions}</li></ul>
+              `;
+              
+              card.appendChild(newElement)
+              
+          })
+          
+      })
+          
+        
+      }) 
+  }
+  
 
     // document.getElementById('like').addEventListener('click', changeColor);
 

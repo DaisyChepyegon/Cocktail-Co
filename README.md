@@ -11,10 +11,13 @@ Daisy Chepyegon
 ## Screenshot
 
 ### LOGIN PAGE
-![image]()
+![image](./assets/images/login.png)
+
+### REGISTER PAGE
+![image](./assets/images/register.png)
 
 ### MAIN PAGE
-![image]()
+![image](./assets/images/main.png)
 
 
 # Table of Content
