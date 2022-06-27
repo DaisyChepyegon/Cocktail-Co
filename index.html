@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Cocktails Co</title>
 </head>
+
 <body>
   <section id="credentials">
     <h1>Cocktail-Co</h1>
     <div class="form">
-      
+
       <div id="image">
         <img src="./assets/images/cocktail1.jpg" alt="">
       </div>
-     
-    
-        <div id="forms" >
 
-          <form id="input-login" class="input">
-            <h2>LOGIN</h2>
-              <input type="email" class="input-field" id="email" placeholder="Enter your email" required />
-              <input  type="password" class="input-field" id="password" placeholder="Enter Password" required />
-              <div id="subButton">
-              <input  type="submit" class="input-field btn-sec" id="btn" value="LOGIN">
-              </div>
-              <span class="signup"><a href="#" id="switch-down">Create an Account</a></span>
-          </form>
-       
-          
-          <form id="input-signup" class="input">
-            <h2>REGISTER</h2>
-              <input  type="Username" class="input-field" placeholder="Enter your username" required />
-              <input  type="Email" class="input-field" placeholder="Email " required />
-              <input  type="number" class="input-field" placeholder="Enter your phone number" required />
-              <input  type="password" class="input-field" placeholder="Enter Password" required />
-              <div id="regBtn">
-              <input  type="submit" class="input-field btn-sec" id="btn1" value="SIGN UP">
-            </div>
-              <span class="signup"><a id="switch-up" href="#">Already a user Login?</a></span>
-          </form>
-        </div>
-        
+
+      <div id="forms">
+
+        <form id="input-login" class="input">
+          <h2>LOGIN</h2>
+          <input type="email" class="input-field" id="email" placeholder="Enter your email" required />
+          <input type="password" class="input-field" id="password" placeholder="Enter Password" required />
+          <div id="subButton">
+            <input type="submit" class="input-field btn-sec" id="btn" value="LOGIN">
+          </div>
+          <span class="signup"><a href="#" id="switch-down">Create an Account</a></span>
+        </form>
+
+
+        <form id="input-signup" class="input">
+          <h2>REGISTER</h2>
+          <input type="Username" class="input-field" placeholder="Enter your username" required />
+          <input type="Email" class="input-field" placeholder="Email " required />
+          <input type="number" class="input-field" placeholder="Enter your phone number" required />
+          <input type="password" class="input-field" placeholder="Enter Password" required />
+          <div id="regBtn">
+            <input type="submit" class="input-field btn-sec" id="btn1" value="SIGN UP">
+          </div>
+          <span class="signup"><a id="switch-up" href="#">Already a user Login?</a></span>
+        </form>
+      </div>
+
     </div>
 
 
@@ -53,102 +55,103 @@
     <h1>Cocktail-Co</h1>
     <div id="land">
       <h3>Every person deserves a happy hour</h3>
-    <img src="./assets/images/cocktail.jpg" alt="">
-    
-  </div>
-  
-  <div id="container">
-    <div id="list">
-      <div class="navigation">
-    
-       
-
-        
-
-      </div>
-      <h3>Cocktail List</h3>
-      <hr>
-
-      <ul id="cocktailList">
-    
-
-      </ul>
+      <img src="./assets/images/cocktail.jpg" alt="">
 
     </div>
 
+    <div id="container">
+      <div id="list">
+        <div class="navigation">
 
-    <div id="details">
-   
-<div id="display">
-  <div id="name">
 
-  </div>
-    <div id="img">
-      <img id="picture" src="./assets/images/SideCar.jpg" alt="DisplayImage">
-    </div>
-    <div id="ingre">
-      <div id="ingredients">
-        <h3>Ingredients</h3>
-        <ul>
-         
-        </ul>
-      </div>
-      <div id="measurements">
-        <h3>Measurements</h3>
-        <ul>
-         
+
+
+
+        </div>
+        <h3>Cocktail List</h3>
+        <hr>
+
+        <ul id="cocktailList">
+
+
         </ul>
 
       </div>
 
+
+      <div id="details">
+
+        <div id="display">
+          <div id="name">
+
+          </div>
+          <div id="img">
+            <img id="picture" src="./assets/images/SideCar.jpg" alt="DisplayImage">
+          </div>
+          <div id="ingre">
+            <div id="ingredients">
+              <h3>Ingredients</h3>
+              <ul>
+
+              </ul>
+            </div>
+            <div id="measurements">
+              <h3>Measurements</h3>
+              <ul>
+
+              </ul>
+
+            </div>
+
+          </div>
+          <h2>Instructions</h2>
+          <div id="instructions">
+
+            <h2></h2>
+
+            <h4> </h4>
+          </div>
+
+        </div>
+
+      </div>
     </div>
-    <h2>Instructions</h2>
-    <div id="instructions">
-     
-      <h2></h2>
 
-      <h4> </h4>
-    </div>
+    <div id="searchDrink">
 
     </div>
 
-  </div>
-</div>
-
- <div id="searchDrink">
-
- </div>
-
- <form id="search">
-  <input type="text" id="searchvalue"  placeholder="">
-  <input id="searchBtn" type="submit" value="SEARCH" />
-</form>
+    <form id="search">
+      <input type="text" id="searchvalue" placeholder="">
+      <input id="searchBtn" type="submit" value="SEARCH" />
+    </form>
 
 
-<div id="searchDrinks">
+    <div id="searchDrinks">
 
-</div>
+    </div>
 
-  <div id="images">
-    <h2>CHOOSE YOUR FAVORITE DRINK</h2>
+    <div id="images">
+      <h2>CHOOSE YOUR FAVORITE DRINK</h2>
 
- 
 
-<div id="drink">
-    
-      <h4 id="add"><span id="like">&#x2661;</span>  like </h4> 
-  
- 
-  
-</div>
 
-  <div id="backButton">
-    <button type="button" id="backBtn">Back To Login</button>
+      <div id="drink">
 
-  </div>
-</section>
+        <h4 id="add"><span id="like">&#x2661;</span> like </h4>
 
-<script  type="text/javascript" src="./assets/JS/index.js"></script>
-<script  type="text/javascript" src="./assets/JS/login.js"></script>
+
+
+      </div>
+
+      <div id="backButton">
+        <button type="button" id="backBtn">Back To Login</button>
+
+      </div>
+  </section>
+
+  <script type="text/javascript" src="./assets/JS/index.js"></script>
+  <script type="text/javascript" src="./assets/JS/login.js"></script>
 </body>
+
 </html>
