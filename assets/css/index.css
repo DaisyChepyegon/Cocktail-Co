@@ -201,3 +201,23 @@ button{
   font-size: 20px;
  
 }
+#name{
+  margin-left: 120px;
+  font-size: 20px;
+  padding: 5px;
+  font-style: italic;
+}
+.scardContainer{
+  display: flex;
+  flex-direction: column;
+
+}
+#simage{
+  width: 200px;
+  height: 200px;
+}
+
+.scard{
+  display: flex;
+  flex-direction: column;
+}

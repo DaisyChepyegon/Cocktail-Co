@@ -2,23 +2,23 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   getData();
-  
+  searchDrink();
 
 });
 
 
 
 //display first drink
-fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a=17222')
-.then(res => res.json())
-.then (data =>
-  {
+// fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a=17222')
+// .then(res => res.json())
+// .then (data =>
+//   {
      
-     const image = document.querySelector("#picture").src=data.strDrinkThumb;
+//      const image = document.querySelector("#picture").src=data.strDrinkThumb;
      
-     const instruction = document.querySelector("#instructions").innerText = data.strInstructions;
+//      const instruction = document.querySelector("#instructions").innerText = data.strInstructions;
 
-})
+// })
 
 
 
@@ -37,7 +37,8 @@ const cocktailList = document.querySelector("#cocktailList");
 let image = document.getElementById("picture");
 let ingredient = document.getElementById("ingredients");
 let measurement = document.getElementById("measurements");
-let instruction =document.getElementById("instructions")
+let instruction =document.getElementById("instructions");
+let names = document.getElementById("name");
 
 function listCocktails(drink) {
 
@@ -47,7 +48,8 @@ function listCocktails(drink) {
 
     cocktailList.appendChild(list);
     list.addEventListener("click", () => {
-
+      
+      names.textContent = element.strDrink;
       image.src=element.strDrinkThumb;
       console.log(element.strDrinkThumb)
 
@@ -138,60 +140,60 @@ function listCocktails(drink) {
 
 
 
-    function searchDrink(){
+  
+function searchDrink(){
 
-      document.querySelector('#search').addEventListener('submit', (e) =>{
-      e.preventDefault()
-      
-  
-      const myValue = e.target.searchvalue.value;
-       const details = document.querySelector("#display"); 
-       dInfo.style.display = "none"
-  
-      const searchDrinks = document.querySelector("#searchDrink");
-      searchDrinks.style.display = "block"
-  
+ const searchDrink= document.querySelector('#search')
+
+     searchDrink.addEventListener("submit",(event) => {
+       event.preventDefault();
+
+       const myValue= event.target.searchvalue.value
+
+      const searchDrinks = document.querySelector("#searchDrinks")
+      searchDrinks.getElementsByClassName.display="block"
+
       const card = document.createElement("div"); 
-      card.className = "sContainer";
-  
-      searchDrinks.innerHTML = ""  
-  
+      card.className = "scardContainer";
+
+      searchDrinks.innerHTML=""
       searchDrinks.appendChild(card)
-      
-      
-      fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${myValue}`)
-      .then(res => res.json())
-      .then(data => {
-          
-          data.drinks.forEach(item =>{
-  
-              const newElement = document.createElement('div')
-              newElement.className = "scard"
-              newElement.innerHTML = `
-              
-              <img id = "simage" src= "${item.strDrinkThumb}" alt= "drink" >
-              <p>Name : ${item.strDrink}</p>
-              <p>Type: ${item.strAlcoholic}</p>
-              <ul>
-              <p>Ingredients:</p>
-              <li>${item.strIngredient1}</li>
-              <li>${item.strIngredient2}</li>
-              <li>${item.strIngredient3}</li>
-              </ul>
-              <p>Description: </p>
-              <ul><li>${item.strInstructions}</li></ul>
-              `;
-              
-              card.appendChild(newElement)
-              
-          })
-          
-      })
-          
+
+    fetch(` https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${myValue}`)
+    .then(res => res.json())
+    .then(data => {
         
-      }) 
-  }
-  
+        data.drinks.forEach(item =>{
+
+            const newElement = document.createElement('div')
+            newElement.className = "scard"
+            newElement.innerHTML = `
+            
+            <img id = "simage" src= "${item.strDrinkThumb}" alt= "drink" >
+            <h3>Name : ${item.strDrink}</h3>
+            <p>Type: ${item.strAlcoholic}</p>
+            <ul>
+            <p>Ingredients:</p>
+            <li>${item.strIngredient1}</li>
+            <li>${item.strIngredient2}</li>
+            <li>${item.strIngredient3}</li>
+            <li>${item.strIngredient4}</li>
+            </ul>
+            <p>Description: </p>
+            <ul><li>${item.strInstructions}</li></ul>
+            
+            `;
+            
+            card.appendChild(newElement)
+            
+        })
+        
+    })
+
+     });
+
+   
+    }
 
     // document.getElementById('like').addEventListener('click', changeColor);
 
@@ -210,26 +212,26 @@ function listCocktails(drink) {
 
 
 
-// const EMPTY_HEART = '♡'
-// const FULL_HEART = '♥'
+const EMPTY_HEART = '♡'
+const FULL_HEART = '♥'
 
-// const like=document.querySelector('#like')
-// like.addEventListener('click', (e) =>{
+const like=document.querySelector('#like')
+like.addEventListener('click', (e) =>{
+console.log(like)
+ const heart = e.target;
+ heart.innerHTML = EMPTY_HEART
 
-//  const heart = e.target;
-//  heart.innerHTML = EMPTY_HEART
-
-//  if(heart.innerHTML === EMPTY_HEART){
-//      heart.innerHTML == FULL_HEART;
-//      heart.classList.add("activated-heart")
+ if(heart.innerHTML === EMPTY_HEART){
+     heart.innerHTML = FULL_HEART;
+     heart.classList.add("activated-heart")
      
-//    }
-//    else {
-//      heart.innerHTML == EMPTY_HEART;
-//      heart.classList.remove("activated-heart")
-//    }
+   }
+   else {
+     heart.innerHTML = EMPTY_HEART;
+     heart.classList.remove("activated-heart")
+   }
 
-//   })
+  })
 
 
 

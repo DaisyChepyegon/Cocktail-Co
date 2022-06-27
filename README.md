@@ -56,8 +56,11 @@ use the navigation the cocktail list to navigate through the contents
 
 # Description
 
-I used html in creating the page structure and used css in styling the page
-and used javascript to fetch and display the cocktail details
+This web application is user to help its users get information about cocktails at the comfort of their homes.They can get the ingredients as well as the instructions on how to make them.
+
+# Challanges
+
+the major challange i faced was implementing the search and the like button
 ---
 # Project Setup Instuctions
 
@@ -73,6 +76,24 @@ https://github.com/DaisyChepyegon/Cocktail-Co
 
 * run the index.html on your browser
 
+# Contributing to the project
+
+*Fork the repo
+
+*Create a new branch in your terminal (git checkout -b improve-feature)
+
+*Install the prerequisites
+
+*Make appropriate changes in file(s)
+
+*Run the server to see the changes
+
+*Add the changes and commit them (git commit -am "Improve App")
+
+*Push to the branch (git push origin improve-app)
+
+*Create a Pull request
+
 ## live link
 
 * click the following link to view the application
@@ -80,6 +101,9 @@ https://github.com/DaisyChepyegon/Cocktail-Co
  https://daisychepyegon.github.io/Cocktail-Co/
 
 ---
+
+## Contact Information
+* Email: daisychpyegon@gmail.com
 
 
 # Licence
