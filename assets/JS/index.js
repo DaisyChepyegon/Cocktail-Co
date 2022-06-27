@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  getData();
+  getData(); //call the function
   searchDrink();
 
 });
@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function getData() {
-  fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a')
-    .then(response => response.json())
+  fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a')//fetch data
+    .then(response => response.json())// parse data to json
     .then((data) => {
       //console.log(data[0])
       listCocktails(data.drinks)
@@ -44,7 +44,7 @@ function listCocktails(drink) {
   drink.forEach(element => {
     let list = document.createElement("li");
     list.textContent = element.strDrink;
-
+//display the cocktails
     cocktailList.appendChild(list);
     list.addEventListener("click", () => {
 
@@ -115,7 +115,7 @@ function listCocktails(drink) {
 
 
 
-
+//fetch from the localhost database
 fetch(`http://localhost:3000/drinks`)
   .then((data) => {
     return data.json();
@@ -123,7 +123,9 @@ fetch(`http://localhost:3000/drinks`)
   .then((completeddata) => {
     let drinks = "";
     completeddata.map((value) => {
+      //create new div and map the content of fetch
       drinks += `
+  
       <div id="drinks">
 
         <img src=${value.strDrinkThumb} alt="img" class ="images">
@@ -139,31 +141,32 @@ fetch(`http://localhost:3000/drinks`)
 
 
 
-
+//implement a search button
 function searchDrink() {
 
   const searchDrink = document.querySelector('#search')
 
   searchDrink.addEventListener("submit", (event) => {
+    //prevent default value
     event.preventDefault();
 
     const myValue = event.target.searchvalue.value
 
     const searchDrinks = document.querySelector("#searchDrinks")
     searchDrinks.getElementsByClassName.display = "block"
-
+//create a new div
     const card = document.createElement("div");
     card.className = "scardContainer";
 
-    searchDrinks.innerHTML = ""
+    searchDrinks.innerHTML = "" //remain empty
     searchDrinks.appendChild(card)
-
+//fetch from public api
     fetch(` https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${myValue}`)
-      .then(res => res.json())
+      .then(res => res.json())//parse data to json
       .then(data => {
-
+//loop through data
         data.drinks.forEach(item => {
-
+//create new div
           const newElement = document.createElement('div')
           newElement.className = "scard"
           newElement.innerHTML = `
@@ -182,7 +185,7 @@ function searchDrink() {
             <ul><li>${item.strInstructions}</li></ul>
             
             `;
-
+// add the content of new element to card
           card.appendChild(newElement)
 
         })
@@ -210,7 +213,7 @@ function searchDrink() {
 
 
 
-
+//change the color of heart from clear to red
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
