@@ -45,6 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   })
 
+  const loginInput = document.getElementById('input-login')
+  const signupInput= document.getElementById('input-signup')
+  const register=document.getElementById("regBtn")
+
+  register.addEventListener('click',()=>{
+    signupInput.style.display = "none";
+    loginInput.style.display = "block";
+    
+  });
+
+  
+
 
 
   
